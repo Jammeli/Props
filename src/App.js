@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profile from './Components/Profile'
 
 function App() {
+  const style={
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: "31px"
+
+    
+  }
+  function getData(){
+    alert ("Hello Marwen Jammeli");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={style}>
+      
+      <Profile 
+        name= 'Marwen Jammeli'
+        bio= 'No pain No gain'
+        profession= 'Full Stack JS Junior'
+        data={getData}>
+        <img src="Images/Marwen.jpg"  alt="Profile" style={{width: "100%"}}/>
+        
+          
+          </Profile>
     </div>
   );
 }
